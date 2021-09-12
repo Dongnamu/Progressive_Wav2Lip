@@ -83,7 +83,7 @@ class TrainWav2Lip(pl.LightningModule):
         self.synclosses = []
 
         if average_sync_loss < 1.:
-            hparams.set_hparam('syncnet_wt', 0.01)
+            hparams.set_hparam('syncnet_wt', 0.03)
 
     # def validation_step(self, batch, batch_idx):
 

@@ -1,3 +1,7 @@
 expert_discriminator/
 wav2lip/
 filelists/
+models/pix2pix.ckpt
+test/
+results/
+temp/
