@@ -239,7 +239,7 @@ class Wav2LipDataset(Dataset):
 
             window = self.prepare_window(window)
             y = window.copy()
-            window[:, 5:-5, window.shape[2]//2:] = 0.
+            window[:, :, window.shape[2]//2:] = 0.
 
             wrong_window = self.prepare_window(wrong_window)
             x = np.concatenate([window, wrong_window], axis=0)
