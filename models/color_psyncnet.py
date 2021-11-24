@@ -14,16 +14,11 @@ class TrainDiscriminator(pl.LightningModule):
     def __init__(self, step=1) -> None:
         super().__init__()
         self.model = PSyncNet_color()
-        # self.update_interval = update_interval
         self.training_losses = []
         self.validation_losses = []
-        # self.average_loss = float("inf")
         self.validation_max_batches = 200
         self.step = step
         self.firstCalled = True
-        # self.dataloaderUpdated = False
-
-        # self.model.apply(self.initialise_weights)
 
     def initialise_weights(self, model):
         if isinstance(model, nn.Conv2d):

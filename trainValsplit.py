@@ -5,7 +5,7 @@ test = open('filelists/val.txt', 'w')
 
 base = '../common_dataset/'
 
-folders = ['aihub','Obama', 'lrs2_enhanced']
+folders = ['Preaching_Face_detected']
 
 for folder in folders:
     videos = os.listdir(os.path.join(base, folder))

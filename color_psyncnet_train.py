@@ -21,9 +21,9 @@ if __name__ == '__main__':
     logger = TensorBoardLogger(opt.checkpoint_dir)
 
     if opt.checkpoint_path:
-        model = TrainDiscriminator.load_from_checkpoint(checkpoint_path=opt.checkpoint_path, update_interval=opt.update_every, step=opt.step)
+        model = TrainDiscriminator.load_from_checkpoint(checkpoint_path=opt.checkpoint_path, step=opt.step)
     else:
-        model = TrainDiscriminator(opt.update_every, opt.step)
+        model = TrainDiscriminator(opt.step)
 
     trainer = Trainer(gpus=opt.gpus, max_epochs=opt.epochs, logger=logger, progress_bar_refresh_rate=1, check_val_every_n_epoch=10, reload_dataloaders_every_n_epochs=100)
     trainer.fit(model)

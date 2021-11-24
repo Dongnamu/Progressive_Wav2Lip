@@ -5,3 +5,10 @@ models/pix2pix.ckpt
 test/
 results/
 temp/
+lrs2_expert_discriminator/
+korean_expert/
+lrs2_wav2lip/
+obama_5hours_wav2lip/
+obama_10hours_wav2lip/
+obama_5hours_wav2lip/
+obama_wav2lip
